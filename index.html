@@ -207,6 +207,9 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .fs::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);transition:left .5s}
 .fs:hover::after{left:160%}
 .fs:hover{background:linear-gradient(135deg,rgba(0,245,255,.24),rgba(168,85,247,.28));border-color:rgba(0,245,255,.5);transform:translateY(-2px);box-shadow:0 18px 44px rgba(0,245,255,.2)}
+.fs:disabled{opacity:.6;pointer-events:none}
+.fst{margin-top:14px;font-family:var(--fm);font-size:12px;letter-spacing:1px;min-height:18px;color:var(--muted)}
+.fst.ok{color:var(--cyan)}.fst.err{color:#f43f8e}
 
 /* FOOTER */
 #ft{position:relative;z-index:2;text-align:center;padding:60px 20px 48px;border-top:1px solid var(--b1)}
@@ -506,12 +509,14 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
         <div class="mr"><div class="mic">📱</div>+91 9602243295</div>
       </div>
     </div>
-    <div class="fw rv">
-      <div class="fg"><label class="fl">Your Name</label><input class="fi" type="text" placeholder="Manan Vijay"/></div>
-      <div class="fg"><label class="fl">Email Address</label><input class="fi" type="email" placeholder="mananvijay13@gmail.com"/></div>
-      <div class="fg"><label class="fl">Message</label><textarea class="fta" placeholder="Tell me about your project..."></textarea></div>
-      <button class="fs mag">Send Message ✦</button>
-    </div>
+    <form class="fw rv" id="cf">
+      <div class="fg"><label class="fl" for="cf-name">Your Name</label><input class="fi" id="cf-name" name="name" type="text" placeholder="Manan Vijay" required/></div>
+      <div class="fg"><label class="fl" for="cf-email">Email Address</label><input class="fi" id="cf-email" name="email" type="email" placeholder="mananvijay13@gmail.com" required/></div>
+      <div class="fg"><label class="fl" for="cf-msg">Message</label><textarea class="fta" id="cf-msg" name="message" placeholder="Tell me about your project..." required></textarea></div>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"/>
+      <button class="fs mag" type="submit">Send Message ✦</button>
+      <p class="fst" id="cf-status" role="status"></p>
+    </form>
   </div>
 </section></div>
 
@@ -620,6 +625,25 @@ window.addEventListener('scroll',()=>nav.classList.toggle('sc',scrollY>55));
 const secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('.nl a');
 const nvo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('act'));const l=document.querySelector(`.nl a[href="#${e.target.id}"]`);if(l)l.classList.add('act')}})},{threshold:.38});
 secs.forEach(s=>nvo.observe(s));
+
+/* ===== CONTACT FORM ===== */
+const cf=document.getElementById('cf'),cfs=document.getElementById('cf-status');
+cf.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const btn=cf.querySelector('button');btn.disabled=true;btn.textContent='Sending...';
+  cfs.className='fst';cfs.textContent='';
+  const fd=new FormData(cf);
+  fd.append('_subject','New portfolio message from '+fd.get('name'));
+  fd.append('_template','table');fd.append('_captcha','false');
+  try{
+    const r=await fetch('https://formsubmit.co/ajax/mananvijay13@gmail.com',{method:'POST',headers:{Accept:'application/json'},body:fd});
+    const j=await r.json();
+    if(!r.ok||j.success==='false'||j.success===false)throw new Error(j.message||'Request failed');
+    cf.reset();cfs.classList.add('ok');cfs.textContent="Message sent! I'll get back to you soon.";
+  }catch(err){
+    cfs.classList.add('err');cfs.textContent='Could not send. Please email mananvijay13@gmail.com directly.';
+  }finally{btn.disabled=false;btn.textContent='Send Message ✦'}
+});
 </script>
 </body>
 </html>
