@@ -38,7 +38,7 @@ A hand-built, single-page portfolio with a 3D particle hero and an AI assistant 
 | Frontend | Vanilla HTML, CSS and JavaScript in a single `index.html`, no build step |
 | 3D | Three.js r128 |
 | AI backend | Vercel Serverless Function (`/api/chat`) |
-| AI models | Groq (Llama 3.3 70B), Google Gemini, or Anthropic Claude, picked by environment variable |
+| AI models | Groq (GPT-OSS 120B), Google Gemini, or Anthropic Claude, picked by environment variable |
 | Forms | FormSubmit |
 | Fonts | Bebas Neue, Outfit, JetBrains Mono |
 | Hosting | Vercel |
@@ -98,7 +98,7 @@ vercel dev                   # opens http://localhost:3000
 
 | Variable | Required | Description |
 | --- | --- | --- |
-| `GROQ_API_KEY` | One of these three | Uses Groq, default model `llama-3.3-70b-versatile` |
+| `GROQ_API_KEY` | One of these three | Uses Groq, default model `openai/gpt-oss-120b` |
 | `GEMINI_API_KEY` | One of these three | Uses Gemini, default model `gemini-flash-latest` |
 | `ANTHROPIC_API_KEY` | One of these three | Uses Claude, default model `claude-haiku-5-5` |
 | `AI_PROVIDER` | No | Forces `groq`, `gemini` or `anthropic` when several keys are set |
