@@ -2,7 +2,7 @@
 // Vercel serverless function. Your API key stays here on the server, never in the browser.
 //
 // Pick a provider by setting ONE of these env vars in Vercel → Settings → Environment Variables:
-//   GROQ_API_KEY       (free, fastest — recommended)   default model: llama-3.3-70b-versatile
+//   GROQ_API_KEY       (free, fastest — recommended)   default model: openai/gpt-oss-120b
 //   GEMINI_API_KEY     (free tier via Google AI Studio) default model: gemini-flash-latest
 //   ANTHROPIC_API_KEY  (paid, Claude)                   default model: claude-haiku-5-5
 // Optional: AI_PROVIDER=groq|gemini|anthropic to force one, AI_MODEL to override the model,
@@ -53,14 +53,18 @@ function pickProvider() {
 }
 
 async function callGroq(messages) {
+  const model = process.env.AI_MODEL || 'openai/gpt-oss-120b';
+  const isGptOss = model.startsWith('openai/gpt-oss');
   const r = await fetch('https://api.groq.com/openai/v1/chat/completions', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.GROQ_API_KEY}` },
     body: JSON.stringify({
-      model: process.env.AI_MODEL || 'llama-3.3-70b-versatile',
+      model,
       messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
       temperature: 0.5,
-      max_tokens: 400,
+      // GPT-OSS "thinks" before answering; keep that short and leave room for the reply
+      max_tokens: isGptOss ? 1024 : 400,
+      ...(isGptOss && { reasoning_effort: 'low' }),
     }),
   });
   const j = await r.json();
