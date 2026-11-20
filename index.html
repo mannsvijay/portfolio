@@ -4,6 +4,18 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Manan Vijay — Full Stack Developer · Designer · Builder</title>
+<meta name="description" content="Manan Vijay is a full-stack developer and UI/UX designer from Jaipur building fast, polished web apps with React, Next.js, Node.js and Spring Boot. Ask his AI assistant anything about his work."/>
+<meta name="author" content="Manan Vijay"/>
+<meta name="theme-color" content="#050510"/>
+<link rel="canonical" href="https://mannsvijay.vercel.app/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://mannsvijay.vercel.app/"/>
+<meta property="og:title" content="Manan Vijay — Full Stack Developer &amp; Designer"/>
+<meta property="og:description" content="Full-stack developer and UI/UX designer from Jaipur. 1300+ DSA problems, 20+ projects shipped. Ask my AI assistant about my work."/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Manan Vijay — Full Stack Developer &amp; Designer"/>
+<meta name="twitter:description" content="Full-stack developer and UI/UX designer from Jaipur. Ask my AI assistant about my work."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300f5ff'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23050510'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial,sans-serif' font-size='28' font-weight='900' text-anchor='middle' fill='url(%23g)'%3EMV%3C/text%3E%3C/svg%3E"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -65,6 +77,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .bg:hover{transform:translateY(-3px);box-shadow:0 14px 44px rgba(0,245,255,.28),0 0 0 1px rgba(0,245,255,.25)}
 .bg span{position:relative;z-index:1}
 .bgh{padding:14px 32px;border:1px solid rgba(255,255,255,.09);border-radius:100px;color:rgba(240,240,255,.55);font-family:var(--fb);font-size:14px;font-weight:500;text-decoration:none;transition:all .35s;cursor:none}
+button.bgh{background:transparent}
 .bgh:hover{border-color:rgba(168,85,247,.4);color:var(--text);background:rgba(168,85,247,.06);transform:translateY(-3px)}
 .hs{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px;opacity:0;animation:fu .8s ease 1.8s forwards}
 .hs span{font-family:var(--fm);font-size:10px;letter-spacing:3px;color:rgba(240,240,255,.28);text-transform:uppercase}
@@ -220,6 +233,74 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .rv{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
 .rv.shown{opacity:1;transform:translateY(0)}
 
+/* ===== AI CHAT ===== */
+.ai-orb{width:22px;height:22px;border-radius:50%;flex-shrink:0;position:relative;background:radial-gradient(circle at 32% 30%,#fff 0%,var(--cyan) 28%,var(--purple) 72%,#3b0764 100%);box-shadow:0 0 14px rgba(0,245,255,.55),0 0 34px rgba(168,85,247,.35)}
+.ai-orb::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid rgba(0,245,255,.45);animation:aiPulse 2.4s ease-out infinite}
+@keyframes aiPulse{0%{transform:scale(.8);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+#ai-fab{position:fixed;right:24px;bottom:24px;z-index:2000;display:flex;align-items:center;gap:11px;padding:10px 20px 10px 12px;background:rgba(5,5,16,.82);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(0,245,255,.25);border-radius:100px;color:var(--text);font-family:var(--fb);font-size:13.5px;font-weight:600;letter-spacing:.2px;cursor:none;box-shadow:0 12px 40px rgba(0,0,0,.45),0 0 0 1px rgba(168,85,247,.08);transition:transform .35s cubic-bezier(.34,1.56,.64,1),opacity .25s,border-color .3s,box-shadow .3s}
+#ai-fab.ai-intro{animation:fu .8s ease 2.2s both}
+#ai-fab:hover{border-color:rgba(0,245,255,.5);box-shadow:0 16px 48px rgba(0,245,255,.18),0 0 0 1px rgba(0,245,255,.2)}
+#ai-fab.hide{transform:scale(.6) translateY(20px);opacity:0;pointer-events:none;animation:none}
+#ai-panel{position:fixed;right:24px;bottom:24px;z-index:2001;width:392px;height:min(620px,calc(100vh - 48px));display:flex;flex-direction:column;background:rgba(7,7,20,.93);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);border:1px solid var(--b1);border-radius:26px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.6),0 0 60px rgba(0,245,255,.06);transform-origin:bottom right;transform:scale(.92) translateY(16px);opacity:0;visibility:hidden;transition:transform .4s cubic-bezier(.34,1.4,.64,1),opacity .25s,visibility 0s .4s}
+#ai-panel.open{transform:none;opacity:1;visibility:visible;transition:transform .4s cubic-bezier(.34,1.4,.64,1),opacity .25s,visibility 0s}
+#ai-panel::before{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),var(--purple),transparent)}
+.ai-hd{display:flex;align-items:center;gap:12px;padding:18px 16px 16px 20px;border-bottom:1px solid var(--b1)}
+.ai-hd .ai-orb{width:30px;height:30px}
+.ai-ttl{flex:1;min-width:0}
+.ai-ttl h3{font-family:var(--fd);font-size:24px;letter-spacing:1px;line-height:1;font-weight:400}
+.ai-ttl p{display:flex;align-items:center;gap:6px;font-family:var(--fm);font-size:10.5px;color:var(--muted);margin-top:4px}
+.ai-ttl p::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.ai-ib{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:transparent;border:1px solid transparent;color:var(--muted);cursor:none;transition:all .2s}
+.ai-ib:hover{color:var(--text);background:rgba(255,255,255,.05);border-color:var(--b1)}
+.ai-ib svg{width:16px;height:16px}
+.ai-log{flex:1;overflow-y:auto;padding:20px 16px 8px;display:flex;flex-direction:column;gap:12px;scroll-behavior:smooth;overscroll-behavior:contain}
+.ai-log::-webkit-scrollbar{width:6px}.ai-log::-webkit-scrollbar-thumb{background:rgba(255,255,255,.08);border-radius:6px}
+.ai-m{max-width:86%;padding:11px 15px;border-radius:18px;font-size:14px;line-height:1.62;font-weight:300;word-wrap:break-word;animation:aiIn .3s ease}
+@keyframes aiIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ai-m.bot{align-self:flex-start;background:rgba(255,255,255,.035);border:1px solid var(--b1);border-bottom-left-radius:6px;color:rgba(240,240,255,.82)}
+.ai-m.user{align-self:flex-end;background:linear-gradient(135deg,rgba(0,245,255,.16),rgba(168,85,247,.2));border:1px solid rgba(0,245,255,.22);border-bottom-right-radius:6px;color:var(--text);font-weight:400}
+.ai-m.err{border-color:rgba(244,63,142,.3);background:rgba(244,63,142,.06)}
+.ai-m strong{font-weight:600;color:var(--text)}
+.ai-m a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(0,245,255,.3);overflow-wrap:anywhere}
+.ai-m a:hover{border-color:var(--cyan)}
+.ai-typing{display:flex;gap:5px;padding:15px 18px}
+.ai-typing span{width:6px;height:6px;border-radius:50%;background:var(--cyan);opacity:.4;animation:aiDot 1.2s ease-in-out infinite}
+.ai-typing span:nth-child(2){animation-delay:.15s;background:#55c9ff}.ai-typing span:nth-child(3){animation-delay:.3s;background:var(--purple)}
+@keyframes aiDot{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-5px);opacity:1}}
+.ai-chips{display:flex;flex-wrap:wrap;gap:7px;padding:2px 0 4px}
+.ai-chip{padding:7px 13px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.09);border-radius:100px;color:rgba(240,240,255,.7);font-family:var(--fb);font-size:12.5px;cursor:none;transition:all .25s}
+.ai-chip:hover{border-color:rgba(0,245,255,.35);color:var(--cyan);background:rgba(0,245,255,.05)}
+.ai-ft{padding:12px 14px 14px;border-top:1px solid var(--b1)}
+.ai-row{display:flex;align-items:flex-end;gap:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:6px 6px 6px 14px;transition:border-color .25s,box-shadow .25s}
+.ai-row:focus-within{border-color:rgba(0,245,255,.35);box-shadow:0 0 0 3px rgba(0,245,255,.06)}
+#ai-in{flex:1;background:none;border:none;outline:none;resize:none;color:var(--text);font-family:var(--fb);font-size:14px;line-height:1.5;padding:7px 0;max-height:110px;min-height:22px}
+#ai-in::placeholder{color:rgba(240,240,255,.3)}
+#ai-send{width:38px;height:38px;flex-shrink:0;display:grid;place-items:center;border-radius:12px;border:1px solid rgba(0,245,255,.3);background:linear-gradient(135deg,rgba(0,245,255,.2),rgba(168,85,247,.24));color:var(--text);cursor:none;transition:all .25s}
+#ai-send:hover{box-shadow:0 8px 24px rgba(0,245,255,.25);border-color:rgba(0,245,255,.55)}
+#ai-send:disabled{opacity:.35;pointer-events:none}
+#ai-send svg{width:16px;height:16px}
+.ai-note{font-family:var(--fm);font-size:10px;color:rgba(240,240,255,.26);text-align:center;margin-top:9px}
+#ai-fab:focus-visible,.ai-ib:focus-visible,.ai-chip:focus-visible,#ai-send:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+@media(max-width:560px){
+  #ai-fab{right:16px;bottom:16px}
+  #ai-panel{inset:0;width:100%;height:100%;height:100dvh;border-radius:0;border:none;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .ai-m{max-width:90%}
+  #ai-in{font-size:16px}
+}
+
+/* TOUCH DEVICES: custom cursor doesn't exist on touch — restore native behaviour */
+@media(hover:none),(pointer:coarse){
+  #cd,#cr{display:none}
+  body,body *{cursor:auto!important}
+  a,button,.ai-chip{cursor:pointer!important}
+}
+
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
 /* RESPONSIVE */
 @media(max-width:960px){.ag,.cg{grid-template-columns:1fr;gap:40px}}
 @media(max-width:680px){.sw{padding:80px 5vw}.nl{display:none}.fw{padding:32px 20px}.sp{padding:36px 24px}.skw{gap:8px}.skc{padding:11px 16px}}
@@ -256,6 +337,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
     <div class="ha">
       <a href="#projects" class="bg mag"><span>View My Work</span></a>
       <a href="#contact" class="bgh mag">Get In Touch</a>
+      <button type="button" class="bgh mag" data-open-ai>Ask My AI ✦</button>
     </div>
   </div>
   <div class="hs">
@@ -336,7 +418,7 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
       <p class="pd">Production-grade hyperlocal grocery marketplace with real-time ordering, multi-vendor cart support, Razorpay payments, and live order tracking. Built with a premium minimal UI, smooth animations, and scalable MERN architecture for a modern commerce experience.</p>
       <div class="pbs"><span class="pb">React</span><span class="pb">Node.js</span><span class="pb">Express</span><span class="pb">MongoDB</span><span class="pb">Razorpay</span></div>
       <div class="pls">
-        <a href="https://green-mart-connect--mnvj69.replit.app/" target="_blank" class="pl">Live Demo →</a>
+        <a href="https://instaveg.vercel.app/" target="_blank" class="pl">Live Demo →</a>
         <a href="https://github.com/mannsvijay/instaveg-fullstack" target="_blank" class="pl s">GitHub →</a>
       </div>
     </div>
@@ -527,10 +609,41 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
   <div class="fl2">Full Stack Developer · UI/UX Designer · ECE Engineer</div>
 </footer>
 
+<!-- AI ASSISTANT -->
+<button type="button" id="ai-fab" class="ai-intro" aria-controls="ai-panel" aria-expanded="false">
+  <span class="ai-orb" aria-hidden="true"></span>Ask my AI
+</button>
+<div id="ai-panel" role="dialog" aria-modal="false" aria-labelledby="ai-title" aria-hidden="true">
+  <div class="ai-hd">
+    <span class="ai-orb" aria-hidden="true"></span>
+    <div class="ai-ttl">
+      <h3 id="ai-title">Manan's AI</h3>
+      <p>Answers from his portfolio</p>
+    </div>
+    <button type="button" class="ai-ib" id="ai-clear" aria-label="Start a new chat" title="New chat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+    </button>
+    <button type="button" class="ai-ib" id="ai-close" aria-label="Close chat" title="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="ai-log" id="ai-log" aria-live="polite"></div>
+  <form class="ai-ft" id="ai-form">
+    <div class="ai-row">
+      <textarea id="ai-in" rows="1" maxlength="600" placeholder="Ask about projects, skills, experience…" aria-label="Your question"></textarea>
+      <button type="submit" id="ai-send" aria-label="Send" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+    <p class="ai-note">AI can make mistakes. Email Manan for anything important.</p>
+  </form>
+</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 /* ===== THREE.JS HERO ===== */
 (function(){
+  if(!window.THREE)return; // CDN blocked or offline: skip the 3D hero, keep the rest of the site working
   const canvas=document.getElementById('hc');
   const W=innerWidth,H=innerHeight;
   const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
@@ -644,6 +757,121 @@ cf.addEventListener('submit',async e=>{
     cfs.classList.add('err');cfs.textContent='Could not send. Please email mananvijay13@gmail.com directly.';
   }finally{btn.disabled=false;btn.textContent='Send Message ✦'}
 });
+</script>
+<script>
+/* ===== AI ASSISTANT ===== */
+(function(){
+  const $=id=>document.getElementById(id);
+  const fab=$('ai-fab'),panel=$('ai-panel'),log=$('ai-log'),form=$('ai-form'),input=$('ai-in'),send=$('ai-send');
+  const STORE='mv-ai-chat',MAX_TURNS=12;
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const WELCOME="Hi! I'm Manan's AI assistant. Ask me about his projects, skills, experience, or how to work with him.";
+  const CHIPS=['What does Manan build?','Tell me about InstaVEG','What is his tech stack?','Is he open to work?','How can I contact him?'];
+  let history=[],busy=false;
+
+  try{history=JSON.parse(sessionStorage.getItem(STORE))||[]}catch(e){history=[]}
+  const save=()=>{try{sessionStorage.setItem(STORE,JSON.stringify(history.slice(-30)))}catch(e){}};
+
+  const esc=t=>t.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function fmt(t){
+    let h=esc(t);
+    h=h.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');
+    h=h.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+    h=h.replace(/(^|[\s(])(https?:\/\/[^\s<)]+[^\s<).,!?])/g,(m,pre,u)=>`${pre}<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'')}</a>`);
+    h=h.replace(/(^|[\s(])([\w.+-]+@[\w-]+\.[\w.]+[a-z])/gi,'$1<a href="mailto:$2">$2</a>');
+    h=h.replace(/^\s*[-•]\s+/gm,'• ');
+    return h.replace(/\n/g,'<br>');
+  }
+  const hoverable=el=>el.querySelectorAll('a,button').forEach(a=>{
+    a.addEventListener('mouseenter',()=>document.body.classList.add('ch'));
+    a.addEventListener('mouseleave',()=>document.body.classList.remove('ch'));
+  });
+  const scroll=()=>{log.scrollTop=log.scrollHeight};
+
+  function bubble(role,text,cls=''){
+    const d=document.createElement('div');
+    d.className=`ai-m ${role==='user'?'user':'bot'} ${cls}`;
+    d.innerHTML=role==='user'?esc(text).replace(/\n/g,'<br>'):fmt(text);
+    log.appendChild(d);hoverable(d);scroll();return d;
+  }
+  // Reveal the reply word by word so it feels live without needing a streaming backend
+  function reveal(text){
+    const d=bubble('bot','');
+    if(reduce){d.innerHTML=fmt(text);hoverable(d);scroll();return Promise.resolve()}
+    const words=text.split(/(\s+)/);let i=0;
+    return new Promise(res=>{(function step(){
+      i=Math.min(i+3,words.length);
+      d.innerHTML=fmt(words.slice(0,i).join(''));scroll();
+      if(i<words.length)setTimeout(step,28);else{hoverable(d);res()}
+    })()});
+  }
+  function chips(){
+    const w=document.createElement('div');w.className='ai-chips';w.id='ai-chips';
+    CHIPS.forEach(q=>{const b=document.createElement('button');b.type='button';b.className='ai-chip';b.textContent=q;b.onclick=()=>ask(q);w.appendChild(b)});
+    log.appendChild(w);hoverable(w);
+  }
+  function renderAll(){
+    log.innerHTML='';
+    bubble('bot',WELCOME);
+    if(!history.length)chips();
+    history.forEach(m=>bubble(m.role,m.content));
+  }
+  function typing(on){
+    let t=$('ai-typing');
+    if(on&&!t){t=document.createElement('div');t.id='ai-typing';t.className='ai-m bot ai-typing';t.setAttribute('aria-label','Assistant is typing');t.innerHTML='<span></span><span></span><span></span>';log.appendChild(t);scroll()}
+    if(!on&&t)t.remove();
+  }
+
+  async function ask(q){
+    q=q.trim();if(!q||busy)return;
+    busy=true;send.disabled=true;
+    $('ai-chips')?.remove();
+    history.push({role:'user',content:q});save();
+    bubble('user',q);
+    input.value='';grow();
+    typing(true);
+    try{
+      const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:history.slice(-MAX_TURNS)})});
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok||!j.reply)throw new Error(j.error||'Request failed');
+      typing(false);
+      history.push({role:'assistant',content:j.reply});save();
+      await reveal(j.reply);
+    }catch(err){
+      typing(false);
+      history.pop();save(); // don't keep a question that never got an answer
+      const msg=(err.message&&err.message!=='Request failed'&&err.message!=='Failed to fetch')?err.message:'The assistant is unavailable right now.';
+      bubble('bot',msg+' You can reach Manan directly at mananvijay13@gmail.com.','err');
+    }finally{
+      busy=false;send.disabled=!input.value.trim();
+      if(panel.classList.contains('open'))input.focus();
+    }
+  }
+
+  function grow(){input.style.height='auto';input.style.height=Math.min(input.scrollHeight,110)+'px'}
+  function open(){
+    fab.classList.remove('ai-intro');
+    panel.classList.add('open');panel.setAttribute('aria-hidden','false');
+    fab.classList.add('hide');fab.setAttribute('aria-expanded','true');
+    scroll();setTimeout(()=>input.focus(),250);
+  }
+  function close(){
+    panel.classList.remove('open');panel.setAttribute('aria-hidden','true');
+    fab.classList.remove('hide');fab.setAttribute('aria-expanded','false');
+    fab.focus();
+  }
+
+  fab.addEventListener('click',open);
+  document.querySelectorAll('[data-open-ai]').forEach(b=>b.addEventListener('click',open));
+  $('ai-close').addEventListener('click',close);
+  $('ai-clear').addEventListener('click',()=>{if(busy)return;history=[];save();renderAll();input.focus()});
+  form.addEventListener('submit',e=>{e.preventDefault();ask(input.value)});
+  input.addEventListener('input',()=>{grow();send.disabled=busy||!input.value.trim()});
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();ask(input.value)}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open'))close()});
+
+  renderAll();
+})();
 </script>
 </body>
 </html>
