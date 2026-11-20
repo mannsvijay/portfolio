@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Manan Vijay — Full Stack Developer · Designer · Builder</title>
-<meta name="description" content="Manan Vijay is a full-stack developer and UI/UX designer from Jaipur building fast, polished web apps with React, Next.js, Node.js and Spring Boot. Ask his AI assistant anything about his work."/>
+<title>Manan Vijay — Full Stack, Backend &amp; Cloud Engineer</title>
+<meta name="description" content="Manan Vijay is a full-stack engineer from Jaipur focused on secure, scalable backend systems with React, Node.js, Spring Boot, PostgreSQL, Redis and Docker. Ask his AI assistant anything about his work."/>
 <meta name="author" content="Manan Vijay"/>
 <meta name="theme-color" content="#050510"/>
 <link rel="canonical" href="https://mannsvijay.vercel.app/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://mannsvijay.vercel.app/"/>
-<meta property="og:title" content="Manan Vijay — Full Stack Developer &amp; Designer"/>
-<meta property="og:description" content="Full-stack developer and UI/UX designer from Jaipur. 1300+ DSA problems, 20+ projects shipped. Ask my AI assistant about my work."/>
+<meta property="og:title" content="Manan Vijay — Full Stack, Backend &amp; Cloud Engineer"/>
+<meta property="og:description" content="Full-stack engineer focused on backend, cloud and data. 1200+ DSA problems, 1800+ LeetCode rating, SIH finalist. Ask my AI assistant about my work."/>
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Manan Vijay — Full Stack Developer &amp; Designer"/>
-<meta name="twitter:description" content="Full-stack developer and UI/UX designer from Jaipur. Ask my AI assistant about my work."/>
+<meta name="twitter:title" content="Manan Vijay — Full Stack, Backend &amp; Cloud Engineer"/>
+<meta name="twitter:description" content="Full-stack engineer focused on backend, cloud and data. Ask my AI assistant about my work."/>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2300f5ff'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23050510'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial,sans-serif' font-size='28' font-weight='900' text-anchor='middle' fill='url(%23g)'%3EMV%3C/text%3E%3C/svg%3E"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -233,6 +233,46 @@ button.bgh{background:transparent}
 .rv{opacity:0;transform:translateY(32px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
 .rv.shown{opacity:1;transform:translateY(0)}
 
+/* SKILLS — categorised rows */
+.skg{border-top:1px solid var(--b1)}
+.skr{display:grid;grid-template-columns:240px 1fr;gap:36px;padding:28px 0;border-bottom:1px solid var(--b1);align-items:start}
+.skl{display:flex;flex-direction:column;gap:6px;padding-top:4px}
+.skl b{display:flex;align-items:center;gap:12px;font-family:var(--fd);font-size:28px;font-weight:400;letter-spacing:1px;line-height:1}
+.skl b::before{content:'';width:8px;height:8px;border-radius:50%;flex-shrink:0;background:var(--k);box-shadow:0 0 12px var(--k)}
+.skl span{font-size:13px;color:var(--muted);font-weight:300;padding-left:20px}
+.skr .skw{gap:8px}
+.skr .skc{padding:9px 16px}
+.skr .sn{font-size:13px;font-weight:500}
+
+/* PROJECTS — featured card, status, more tile */
+.pf{grid-column:1/-1;display:grid;grid-template-columns:1.3fr 1fr;gap:56px;padding:44px}
+.pft{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.pft .pch{margin-bottom:0}
+.pst{display:inline-flex;align-items:center;gap:8px;font-family:var(--fm);font-size:11px;color:var(--green)}
+.pst i{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pc 2s ease infinite}
+.pf .pt{font-size:56px;line-height:.95}
+.pf .pd{font-size:14.5px}
+.pfh{list-style:none;display:flex;flex-direction:column;align-self:center;border-left:1px solid var(--b1);padding-left:40px}
+.pfh li{display:grid;grid-template-columns:118px 1fr;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--b1)}
+.pfh li:last-child{border-bottom:none}
+.pfh b{font-family:var(--fd);font-size:40px;font-weight:400;line-height:1;letter-spacing:1px;background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.pfh span{font-size:13.5px;color:var(--muted);line-height:1.6;font-weight:300}
+.pmore{display:flex;flex-direction:column;justify-content:center;text-decoration:none;color:var(--text);border-style:dashed;background:transparent}
+.pmore .pl{margin-top:4px}
+.pmore:hover .pl{gap:14px;text-shadow:0 0 14px rgba(0,245,255,.7)}
+.ach .tla{margin-top:12px}
+
+/* RESUME */
+.rsw{padding-top:90px;padding-bottom:90px}
+.rsm{display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;padding:48px 52px;background:rgba(255,255,255,.02);border:1px solid var(--b1);border-radius:28px;position:relative;overflow:hidden}
+.rsm::before{content:'';position:absolute;top:0;left:20%;right:20%;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),var(--purple),transparent)}
+.rsh{font-family:var(--fd);font-size:clamp(38px,5vw,60px);font-weight:400;line-height:.95;letter-spacing:1px;margin-bottom:12px}
+.rsh .ac{background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.rsp{color:var(--muted);font-size:15px;font-weight:300}
+.rsa{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:960px){.pf{grid-template-columns:1fr;gap:32px;padding:36px}.pfh{border-left:none;padding-left:0;border-top:1px solid var(--b1)}}
+@media(max-width:760px){.skr{grid-template-columns:1fr;gap:14px;padding:22px 0}.pf .pt{font-size:44px}.pfh li{grid-template-columns:92px 1fr}.pfh b{font-size:32px}.rsm{padding:36px 24px;grid-template-columns:1fr;gap:28px}.rsa a{flex:1 1 100%;text-align:center}}
+
 /* ===== AI CHAT ===== */
 .ai-orb{width:22px;height:22px;border-radius:50%;flex-shrink:0;position:relative;background:radial-gradient(circle at 32% 30%,#fff 0%,var(--cyan) 28%,var(--purple) 72%,#3b0764 100%);box-shadow:0 0 14px rgba(0,245,255,.55),0 0 34px rgba(168,85,247,.35)}
 .ai-orb::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid rgba(0,245,255,.45);animation:aiPulse 2.4s ease-out infinite}
@@ -323,6 +363,7 @@ button.bgh{background:transparent}
     <a href="#projects">Work</a>
     <a href="#experience">Journey</a>
     <a href="#contact">Contact</a>
+    <a href="#resume">Resume</a>
   </div>
   <a href="#contact" class="nc mag">Let's Talk →</a>
 </nav>
@@ -353,24 +394,24 @@ button.bgh{background:transparent}
   <h2 class="sh rv">Building the <span class="ac">Future,<br/>One Line</span> at a Time.</h2>
   <div class="ag">
     <div class="ab rv">
-      <p>I'm a <strong>full-stack developer</strong> passionate about building fast, scalable, and visually polished applications that blend performance with great user experience.</p>
-      <p>From crafting modern web apps using <strong>React, Next.js, Node.js, Express, MongoDB, SQL, and Spring Boot</strong> to solving <strong>1300+ DSA problems in C++</strong>, I enjoy turning complex ideas into production-ready systems.</p>
-      <p>I've worked on freelance projects, built full-stack platforms from scratch, designed secure REST APIs with <strong>JWT authentication</strong>, and explored modern technologies like TypeScript, Generative AI, Kafka, H2 Database, and Framer Motion to create seamless digital products.</p>
-      <p>Beyond development, I'm constantly experimenting with <strong>design systems, motion, and clean interfaces using Figma</strong> to make products feel as good as they function.</p>
+      <p>I'm a <strong>full-stack engineer who leans backend</strong>. I build secure, scalable systems end to end, from the database schema and APIs to the React interface and the pipeline that ships it.</p>
+      <p>I work across <strong>React, Next.js, Node.js, Spring Boot, PostgreSQL, Redis and Docker</strong>, and I'm drawn to the hard parts: concurrency, authorization, data correctness, and proving a system holds up under load instead of just claiming it.</p>
+      <p>Since 2024 I've shipped <strong>20+ apps for freelance clients</strong> as the sole engineer on each, solved <strong>1200+ DSA problems</strong> with an 1800+ LeetCode contest rating, and reached the finals of the Smart India Hackathon.</p>
+      <p>Right now I'm going deeper into <strong>cloud, DevOps and data engineering</strong>, and building with applied AI: prompt engineering, AI workflow automation, and evaluating whether AI output is actually good.</p>
       <div class="tgs">
-        <span class="tg">React</span><span class="tg">Next.js</span><span class="tg">Node.js</span>
-        <span class="tg">Spring Boot</span><span class="tg">C++ / DSA</span><span class="tg">TypeScript</span>
-        <span class="tg">MongoDB</span><span class="tg">JWT</span><span class="tg">Kafka</span>
-        <span class="tg">Figma</span><span class="tg">Framer Motion</span><span class="tg">Generative AI</span>
+        <span class="tg">React</span><span class="tg">Next.js</span><span class="tg">TypeScript</span>
+        <span class="tg">Node.js</span><span class="tg">Spring Boot</span><span class="tg">PostgreSQL</span>
+        <span class="tg">Redis</span><span class="tg">Docker</span><span class="tg">CI/CD</span>
+        <span class="tg">Kafka</span><span class="tg">Python</span><span class="tg">Generative AI</span>
       </div>
     </div>
     <div class="rv">
       <div class="sp">
         <div class="sg">
-          <div class="sb"><span class="sv" data-count="1300" data-sfx="+">0</span><span class="sl">DSA<br/>Problems</span></div>
-          <div class="sb"><span class="sv" data-count="20" data-sfx="+">0</span><span class="sl">Projects<br/>Shipped</span></div>
-          <div class="sb"><span class="sv" data-count="3" data-sfx="+">0</span><span class="sl">Years of<br/>Building</span></div>
-          <div class="sb"><span class="sv" style="font-size:52px">∞</span><span class="sl">Passion for<br/>Design</span></div>
+          <div class="sb"><span class="sv" data-count="1200" data-sfx="+">0</span><span class="sl">DSA<br/>Problems</span></div>
+          <div class="sb"><span class="sv" data-count="1800" data-sfx="+">0</span><span class="sl">LeetCode<br/>Rating</span></div>
+          <div class="sb"><span class="sv" data-count="20" data-sfx="+">0</span><span class="sl">Client Apps<br/>Shipped</span></div>
+          <div class="sb"><span class="sv" data-count="500">0</span><span class="sl">Day LeetCode<br/>Badge</span></div>
         </div>
       </div>
     </div>
@@ -382,25 +423,39 @@ button.bgh{background:transparent}
 <div class="sw"><section id="skills">
   <p class="se rv">My Arsenal</p>
   <h2 class="sh rv">Skills &amp; <span class="ac">Tech Stack</span></h2>
-  <div class="skw">
-    <div class="skc"><span class="sei">⚛️</span><div class="sn">React JS / Vite</div></div>
-    <div class="skc"><span class="sei">🟢</span><div class="sn">Node JS</div></div>
-    <div class="skc"><span class="sei">⚡</span><div class="sn">C++ / DSA </div></div>
-    <div class="skc"><span class="sei">🚂</span><div class="sn">Express</div></div>
-    <div class="skc"><span class="sei">🍃</span><div class="sn">MongoDB</div></div>
-    <div class="skc"><span class="sei">▲</span><div class="sn">Next JS</div></div>
-    <div class="skc"><span class="sei">🔌</span><div class="sn">REST APIs</div></div>
-    <div class="skc"><span class="sei">🔷</span><div class="sn">TypeScript</div></div>
-    <div class="skc"><span class="sei">🗄️</span><div class="sn">SQL</div></div>
-    <div class="skc"><span class="sei">🎨</span><div class="sn">UI / UX</div></div>
-    <div class="skc"><span class="sei">🧩</span><div class="sn">Mongoose</div></div>
-    <div class="skc"><span class="sei">💾</span><div class="sn">H2 Database</div></div>
-    <div class="skc"><span class="sei">☕</span><div class="sn">Java SpringBoot</div></div>
-    <div class="skc"><span class="sei">🤖</span><div class="sn">Generative AI</div></div>
-    <div class="skc"><span class="sei">🔑</span><div class="sn">JWT Auth</div></div>
-    <div class="skc"><span class="sei">🌀</span><div class="sn">Framer Motion</div></div>
-    <div class="skc"><span class="sei">🖊️</span><div class="sn">Figma</div></div>
-    <div class="skc"><span class="sei">📨</span><div class="sn">Kafka</div></div>
+  <div class="skg">
+    <div class="skr rv" style="--k:var(--cyan)">
+      <div class="skl"><b>Languages</b><span>What I write in</span></div>
+      <div class="skw"><div class="skc"><span class="sn">C</span></div><div class="skc"><span class="sn">C++</span></div><div class="skc"><span class="sn">Java</span></div><div class="skc"><span class="sn">JavaScript</span></div><div class="skc"><span class="sn">TypeScript</span></div><div class="skc"><span class="sn">Python</span></div></div>
+    </div>
+    <div class="skr rv" style="--k:var(--purple)">
+      <div class="skl"><b>Frontend</b><span>Interfaces people use</span></div>
+      <div class="skw"><div class="skc"><span class="sn">React.js</span></div><div class="skc"><span class="sn">Next.js</span></div><div class="skc"><span class="sn">Redux</span></div><div class="skc"><span class="sn">TanStack Query</span></div><div class="skc"><span class="sn">Tailwind CSS</span></div><div class="skc"><span class="sn">Three.js</span></div><div class="skc"><span class="sn">HTML</span></div><div class="skc"><span class="sn">CSS</span></div></div>
+    </div>
+    <div class="skr rv" style="--k:var(--green)">
+      <div class="skl"><b>Backend</b><span>APIs, auth and services</span></div>
+      <div class="skw"><div class="skc"><span class="sn">Node.js</span></div><div class="skc"><span class="sn">Express.js</span></div><div class="skc"><span class="sn">Spring Boot</span></div><div class="skc"><span class="sn">REST APIs</span></div><div class="skc"><span class="sn">OpenAPI</span></div><div class="skc"><span class="sn">JWT Auth &amp; RBAC</span></div><div class="skc"><span class="sn">Zod</span></div></div>
+    </div>
+    <div class="skr rv" style="--k:var(--pink)">
+      <div class="skl"><b>Databases &amp; Data</b><span>Storing, modeling and moving data</span></div>
+      <div class="skw"><div class="skc"><span class="sn">PostgreSQL</span></div><div class="skc"><span class="sn">MySQL</span></div><div class="skc"><span class="sn">MongoDB</span></div><div class="skc"><span class="sn">Redis</span></div><div class="skc"><span class="sn">H2 Database</span></div><div class="skc"><span class="sn">Drizzle ORM</span></div><div class="skc"><span class="sn">Mongoose</span></div><div class="skc"><span class="sn">Apache Kafka</span></div><div class="skc"><span class="sn">Data Modeling</span></div><div class="skc"><span class="sn">Data Validation</span></div></div>
+    </div>
+    <div class="skr rv" style="--k:var(--cyan)">
+      <div class="skl"><b>Cloud &amp; DevOps</b><span>Shipping and running it</span></div>
+      <div class="skw"><div class="skc"><span class="sn">Docker</span></div><div class="skc"><span class="sn">Docker Compose</span></div><div class="skc"><span class="sn">CI/CD Pipelines</span></div><div class="skc"><span class="sn">GitHub Actions</span></div><div class="skc"><span class="sn">Vercel</span></div><div class="skc"><span class="sn">Oracle Cloud (OCI)</span></div><div class="skc"><span class="sn">Neon</span></div><div class="skc"><span class="sn">MongoDB Atlas</span></div><div class="skc"><span class="sn">Git &amp; GitHub</span></div><div class="skc"><span class="sn">Postman</span></div></div>
+    </div>
+    <div class="skr rv" style="--k:var(--purple)">
+      <div class="skl"><b>Applied AI &amp; GenAI</b><span>Building with AI platforms</span></div>
+      <div class="skw"><div class="skc"><span class="sn">Generative AI (GenAI)</span></div><div class="skc"><span class="sn">Claude</span></div><div class="skc"><span class="sn">ChatGPT</span></div><div class="skc"><span class="sn">Prompt Engineering</span></div><div class="skc"><span class="sn">AI Workflow Automation</span></div><div class="skc"><span class="sn">Applied AI Evaluation</span></div></div>
+    </div>
+    <div class="skr rv" style="--k:var(--green)">
+      <div class="skl"><b>Testing &amp; Quality</b><span>Proving it works</span></div>
+      <div class="skw"><div class="skc"><span class="sn">Playwright</span></div><div class="skc"><span class="sn">Vitest</span></div><div class="skc"><span class="sn">JUnit</span></div><div class="skc"><span class="sn">k6 Load Testing</span></div><div class="skc"><span class="sn">Concurrency Testing</span></div></div>
+    </div>
+    <div class="skr rv" style="--k:var(--pink)">
+      <div class="skl"><b>Core CS</b><span>The foundations</span></div>
+      <div class="skw"><div class="skc"><span class="sn">Data Structures &amp; Algorithms</span></div><div class="skc"><span class="sn">OOP</span></div><div class="skc"><span class="sn">DBMS</span></div><div class="skc"><span class="sn">Operating Systems</span></div><div class="skc"><span class="sn">Computer Networks</span></div></div>
+    </div>
   </div>
 </section></div>
 
@@ -411,75 +466,73 @@ button.bgh{background:transparent}
   <h2 class="sh rv">Projects That <span class="ac">Define Me</span></h2>
   <div class="pgd">
 
-    <div class="pc">
+    <article class="pc pf">
       <div class="pn">01</div>
+      <div class="pfm">
+        <div class="pft"><span class="pch">Backend · Distributed Systems</span><span class="pst"><i></i>In active development</span></div>
+        <h3 class="pt">Stampede</h3>
+        <p class="pd">A ticketing platform built for the worst five minutes in ticketing: thousands of buyers racing for the same seats. Seat holds run through pluggable locking strategies that are load-tested head to head, every test run is checked against invariants like “no seat is ever sold twice”, and tickets are Ed25519-signed so they can be verified offline. Every architecture choice is written up with its trade-offs.</p>
+        <div class="pbs"><span class="pb">Java</span><span class="pb">Spring Boot</span><span class="pb">PostgreSQL</span><span class="pb">Redis</span><span class="pb">React 19</span><span class="pb">TypeScript</span><span class="pb">Docker Compose</span><span class="pb">GitHub Actions</span><span class="pb">k6</span></div>
+        <div class="pls"><a href="https://github.com/mannsvijay/stampede" target="_blank" rel="noopener" class="pl s">GitHub →</a></div>
+      </div>
+      <ul class="pfh">
+        <li><b>3</b><span>seat-locking strategies: pessimistic, optimistic, and Redis-first with Lua scripts</span></li>
+        <li><b>1,000</b><span>randomized concurrency rounds per strategy in the CI proof workflow</span></li>
+        <li><b>8</b><span>modules in one Spring Boot app, boundaries enforced by Spring Modulith tests</span></li>
+        <li><b>24</b><span>design decisions documented, each with how I’d know it was wrong</span></li>
+      </ul>
+    </article>
+
+    <article class="pc">
+      <div class="pn">02</div>
       <span class="pch">Full Stack · Marketplace</span>
       <h3 class="pt">InstaVEG</h3>
-      <p class="pd">Production-grade hyperlocal grocery marketplace with real-time ordering, multi-vendor cart support, Razorpay payments, and live order tracking. Built with a premium minimal UI, smooth animations, and scalable MERN architecture for a modern commerce experience.</p>
-      <div class="pbs"><span class="pb">React</span><span class="pb">Node.js</span><span class="pb">Express</span><span class="pb">MongoDB</span><span class="pb">Razorpay</span></div>
-      <div class="pls">
-        <a href="https://instaveg.vercel.app/" target="_blank" class="pl">Live Demo →</a>
-        <a href="https://github.com/mannsvijay/instaveg-fullstack" target="_blank" class="pl s">GitHub →</a>
-      </div>
-    </div>
+      <p class="pd">Hyperlocal marketplace where neighbourhood farms sell produce straight to buyers, with separate Buyer, Seller and Admin experiences. An OpenAPI 3.1 contract generates the React Query hooks and Zod validators, the Express API enforces JWT auth and role-based access, and a self-run security audit closed BOLA/IDOR authorization gaps before launch.</p>
+      <div class="pbs"><span class="pb">TypeScript</span><span class="pb">React 19</span><span class="pb">Express 5</span><span class="pb">PostgreSQL</span><span class="pb">Drizzle ORM</span><span class="pb">OpenAPI</span><span class="pb">Zod</span></div>
+      <div class="pls"><a href="https://instaveg.vercel.app/" target="_blank" rel="noopener" class="pl">Live Demo →</a><a href="https://github.com/mannsvijay/instaveg-fullstack" target="_blank" rel="noopener" class="pl s">GitHub →</a></div>
+    </article>
 
-    <div class="pc">
-      <div class="pn">02</div>
+    <article class="pc">
+      <div class="pn">03</div>
       <span class="pch p">Full Stack · Healthcare</span>
       <h3 class="pt">Appointy</h3>
-      <p class="pd">Full-stack doctor appointment platform with Patient, Doctor, and Admin portals. Integrates Stripe &amp; Razorpay for seamless secure payments. Built on the MERN stack with role-based dashboards, efficient appointment flow, and a clean accessible UI.</p>
-      <div class="pbs"><span class="pb">React</span><span class="pb">Node.js</span><span class="pb">MongoDB</span><span class="pb">Stripe</span><span class="pb">Razorpay</span></div>
-      <div class="pls">
-        <a href="https://appointy-roan.vercel.app/" target="_blank" class="pl">Live Demo →</a>
-        <a href="https://github.com/mannsvijay/appointy-fullstack" target="_blank" class="pl s">GitHub →</a>
-      </div>
-    </div>
+      <p class="pd">Doctor appointment platform with Patient, Doctor and Admin portals. Patients find doctors by specialty and book open slots, doctors manage availability and track earnings, and admins onboard doctors and oversee every booking. JWT authentication for all three roles, with Razorpay and Stripe payments.</p>
+      <div class="pbs"><span class="pb">React</span><span class="pb">Node.js</span><span class="pb">Express</span><span class="pb">MongoDB</span><span class="pb">JWT</span><span class="pb">Razorpay</span><span class="pb">Stripe</span></div>
+      <div class="pls"><a href="https://appointy-roan.vercel.app/" target="_blank" rel="noopener" class="pl">Live Demo →</a><a href="https://github.com/mannsvijay/appointy-fullstack" target="_blank" rel="noopener" class="pl s">GitHub →</a></div>
+    </article>
 
-    <div class="pc">
-      <div class="pn">03</div>
-      <span class="pch g">Backend · API</span>
-      <h3 class="pt">SocialTube</h3>
-      <p class="pd">Production-grade social media &amp; video hosting backend inspired by YouTube + Twitter/X. Features secure JWT auth, video uploads, tweets/posts, subscriptions, playlists, likes, comments, and real-time social interactions using modern scalable backend architecture.</p>
-      <div class="pbs"><span class="pb">Node.js</span><span class="pb">Express</span><span class="pb">MongoDB</span><span class="pb">JWT</span><span class="pb">Mongoose</span></div>
-      <div class="pls">
-        <a href="https://social-tube-manns.vercel.app/" target="_blank" class="pl">Live Demo →</a>
-        <a href="https://github.com/mannsvijay/socialtube" target="_blank" class="pl s">GitHub →</a>
-      </div>
-    </div>
-
-    <div class="pc">
+    <article class="pc">
       <div class="pn">04</div>
-      <span class="pch">Study Tool · EdTech</span>
-      <h3 class="pt">Power Electronics Guide</h3>
-      <p class="pd">Interactive RTU exam study guide for Power Electronics (6EC3-01) — a full-featured web app with 91 video topics, 7 PYQ papers, progress tracking with localStorage, and a unit-by-unit breakdown built for real exam preparation.</p>
-      <div class="pbs"><span class="pb">HTML</span><span class="pb">CSS</span><span class="pb">JavaScript</span><span class="pb">localStorage</span></div>
-      <div class="pls">
-        <a href="https://power-electronics-rtu.vercel.app/" target="_blank" class="pl">Live Site →</a>
-      </div>
-    </div>
+      <span class="pch g">Data Engineering</span>
+      <h3 class="pt">FairShift</h3>
+      <p class="pd">Workforce scheduling engine that generates and schedules 2,000 employees across 100 teams for 90 days in about 30 seconds, then proves from the exported files alone that the data is consistent: 144 of 144 validation checks pass, labelled anomalies are caught with 1.0 precision and recall, and every run is byte-for-byte reproducible.</p>
+      <div class="pbs"><span class="pb">Python</span><span class="pb">SQLite</span><span class="pb">Data Validation</span><span class="pb">Reproducible Pipelines</span><span class="pb">Unit Testing</span></div>
+      <div class="pls"><a href="https://github.com/mannsvijay/fairshift-scheduler" target="_blank" rel="noopener" class="pl s">GitHub →</a></div>
+    </article>
 
-    <div class="pc">
+    <article class="pc">
       <div class="pn">05</div>
-      <span class="pch p">Study Tool · EdTech</span>
-      <h3 class="pt">FOC Radar</h3>
-      <p class="pd">Interactive Fiber Optics &amp; Communications study guide for RTU 6th Semester — a smart PYQ topic-priority radar with exam mapping, visual topic weights, unit breakdown, and a sleek dark UI designed for high-retention exam prep.</p>
-      <div class="pbs"><span class="pb">HTML</span><span class="pb">CSS</span><span class="pb">JavaScript</span><span class="pb">Data Viz</span></div>
-      <div class="pls">
-        <a href="https://foc-radar.vercel.app/" target="_blank" class="pl">Live Site →</a>
-      </div>
-    </div>
+      <span class="pch">Data · Full Stack</span>
+      <h3 class="pt">Insight Analytics Dashboard</h3>
+      <p class="pd">Analytics console over 1,000 research insights scored on intensity, likelihood and relevance. Eight interactive charts and live KPI cards run on server-side MongoDB aggregation pipelines, with combinable filters for country, region, topic, sector, PESTLE, source and year.</p>
+      <div class="pbs"><span class="pb">React</span><span class="pb">Vite</span><span class="pb">Recharts</span><span class="pb">Node.js</span><span class="pb">Express</span><span class="pb">MongoDB</span></div>
+      <div class="pls"><a href="https://blackcoffer-insight-dashboard.vercel.app/" target="_blank" rel="noopener" class="pl">Live Demo →</a><a href="https://github.com/mannsvijay/Blackcoffer-insight-dashboard" target="_blank" rel="noopener" class="pl s">GitHub →</a></div>
+    </article>
 
-    <div class="pc">
+    <article class="pc">
       <div class="pn">06</div>
-      <span class="pch g">FinTech · Backend</span>
-      <h3 class="pt">JPMorgan — SEVP</h3>
-      <p class="pd">Built backend solutions using Java, Spring Boot, Apache Kafka, and H2 SQL. Integrated Kafka message queues for async transaction processing, implemented JPA entities, repositories, REST API integration for external incentives, and balance update logic in a cloud-based environment.</p>
-      <div class="pbs"><span class="pb">Java</span><span class="pb">Spring Boot</span><span class="pb">Kafka</span><span class="pb">H2 SQL</span><span class="pb">JPA</span></div>
-      <div class="pls">
-        <a href="https://www.linkedin.com/in/mannsvijay/overlay/Position/2693634863/treasury/?profileId=ACoAAEIOUCMB5R6nDKsMpVsYUVtH_TIo-CVZfT4" target="_blank" class="pl">View Certificate →</a>
-      </div>
-    </div>
+      <span class="pch p">Backend · Security</span>
+      <h3 class="pt">Cynbit Backend Audit</h3>
+      <p class="pd">A passive, read-only backend and security audit of a production Next.js site: 20 findings across data handling, security, API design and performance, each with severity and evidence, plus 12 runnable reference fixes, including rate limiting, AES-256-GCM field encryption, a transactional outbox and Postgres row-level security.</p>
+      <div class="pbs"><span class="pb">Next.js</span><span class="pb">TypeScript</span><span class="pb">Zod</span><span class="pb">Prisma</span><span class="pb">PostgreSQL RLS</span><span class="pb">Upstash Redis</span></div>
+      <div class="pls"><a href="https://cynbit-backend-audit-black.vercel.app" target="_blank" rel="noopener" class="pl">Read Report →</a><a href="https://github.com/mannsvijay/cynbit-backend-audit" target="_blank" rel="noopener" class="pl s">GitHub →</a></div>
+    </article>
 
+    <a class="pc pmore" href="https://github.com/mannsvijay?tab=repositories" target="_blank" rel="noopener">
+      <h3 class="pt">More on GitHub</h3>
+      <p class="pd">30+ repositories, including SocialTube (a YouTube and X style backend), Chromatic Flux (a React Three Fiber experience), a Playwright QA suite, and a ROS 2 TurtleBot navigation demo.</p>
+      <span class="pl">Browse all repositories →</span>
+    </a>
   </div>
 </section></div>
 
@@ -489,12 +542,14 @@ button.bgh{background:transparent}
   <p class="se rv">Milestones</p>
   <h2 class="sh rv">Achievements &amp; <span class="ac">Highlights</span></h2>
   <div class="achg">
-    <div class="ach"><span class="ai">⚡</span><h4 class="at">1300+ DSA Problems</h4><p class="as">Solved 1300+ problems in C++ with an active streak and consistent algorithmic performance on LeetCode.</p></div>
-    <div class="ach"><span class="ai">🏦</span><h4 class="at">JPMorgan Chase</h4><p class="as">Completed Software Engineering Virtual Experience — built event-driven Java backends with Kafka &amp; Spring Boot.</p></div>
-    <div class="ach"><span class="ai">📊</span><h4 class="at">Deloitte Analytics VE</h4><p class="as">Completed data analytics &amp; forensic technology simulation, solving real-world business analytics problems.</p></div>
-    <div class="ach"><span class="ai">🤖</span><h4 class="at">ML Certificate</h4><p class="as">Earned Machine Learning training certificate, bridging AI fundamentals with practical implementation.</p></div>
-    <div class="ach"><span class="ai">👕</span><h4 class="at">Flickies Co-Founder</h4><p class="as">Co-founded a Jaipur streetwear brand combining entrepreneurship, brand design, and street culture.</p></div>
-    <div class="ach"><span class="ai">💼</span><h4 class="at">Freelance Developer</h4><p class="as">Delivered premium full-stack and UI/UX projects, earning from professional client work since 2023.</p></div>
+    <div class="ach"><span class="ai">⚡</span><h4 class="at">1200+ DSA Problems</h4><p class="as">Solved across platforms, 900+ on LeetCode, with an 1800+ contest rating and the 500 Days badge.</p><a href="https://leetcode.com/u/mannsvijay/" target="_blank" rel="noopener" class="tla">View LeetCode →</a></div>
+    <div class="ach"><span class="ai">🏆</span><h4 class="at">Global Contest Ranks</h4><p class="as">Rank 198 in LeetCode Biweekly 174, 375 in Biweekly 190 and 1576 in Biweekly 175, among thousands worldwide.</p></div>
+    <div class="ach"><span class="ai">🚀</span><h4 class="at">SIH Finalist</h4><p class="as">Finalist at the Smart India Hackathon, and a participant in several other national-level hackathons.</p></div>
+    <div class="ach"><span class="ai">☁️</span><h4 class="at">OCI Generative AI Professional</h4><p class="as">Certified by Oracle as an Oracle Cloud Infrastructure Generative AI Professional.</p></div>
+    <div class="ach"><span class="ai">🏦</span><h4 class="at">JPMorgan Chase &amp; Deloitte</h4><p class="as">JPMorgan Chase Software Engineering Virtual Experience (Java, Spring Boot, Kafka) and Deloitte Data Analytics Job Simulation.</p></div>
+    <div class="ach"><span class="ai">💼</span><h4 class="at">20+ Client Apps Shipped</h4><p class="as">Sole engineer on every freelance engagement since 2024, from requirements and architecture to live deployment.</p></div>
+    <div class="ach"><span class="ai">🎤</span><h4 class="at">Guest Speaker</h4><p class="as">Invited to speak at JECRC University’s “Protocraft” workshop, organised by DevCrest JU.</p></div>
+    <div class="ach"><span class="ai">👕</span><h4 class="at">Flickies Co-Founder</h4><p class="as">Co-founded a Jaipur streetwear brand, leading its branding, creative direction and digital presence.</p></div>
   </div>
 </section></div>
 
@@ -584,7 +639,7 @@ button.bgh{background:transparent}
   <div class="cg">
     <div class="cl rv">
       <h3>Ready to Collaborate?</h3>
-      <p>Whether it's a web project, UI/UX design, a startup idea, or just a conversation about tech and design — I'm always open to connecting with the right people.</p>
+      <p>Whether it's a full-time role, an internship, a freelance build, or a conversation about backend systems, cloud and data, I'm always open to connecting with the right people.</p>
       <div class="cm">
         <div class="mr"><div class="mic">📍</div>Jaipur, Rajasthan, India</div>
         <div class="mr"><div class="mic">📧</div>mananvijay13@gmail.com</div>
@@ -602,11 +657,25 @@ button.bgh{background:transparent}
   </div>
 </section></div>
 
+<!-- RESUME -->
+<div class="hr"></div>
+<div class="sw rsw"><section id="resume" class="rsm rv">
+  <div class="rst">
+    <p class="se">Resume</p>
+    <h2 class="rsh">Everything on <span class="ac">one page</span></h2>
+    <p class="rsp">Education, projects, experience and achievements in a single PDF.</p>
+  </div>
+  <div class="rsa">
+    <a href="/Manan_Vijay_Resume.pdf" target="_blank" rel="noopener" class="bg mag"><span>Open Resume</span></a>
+    <a href="/Manan_Vijay_Resume.pdf" download="Manan_Vijay_Resume.pdf" class="bgh mag">Download PDF</a>
+  </div>
+</section></div>
+
 <!-- FOOTER -->
 <footer id="ft">
   <div class="fm2">MV ✦</div>
   <div class="fl2">Designed &amp; Built by Manan Vijay · @2026 · Jaipur, India</div>
-  <div class="fl2">Full Stack Developer · UI/UX Designer · ECE Engineer</div>
+  <div class="fl2">Full Stack · Backend · Cloud &amp; DevOps · Data Engineer</div>
 </footer>
 
 <!-- AI ASSISTANT -->
@@ -701,7 +770,7 @@ document.querySelectorAll('a,button,.pc,.skc,.ach,.sb2,.tg,.tlc').forEach(el=>{
 });
 
 /* ===== TYPEWRITER ===== */
-const phrases=['Full Stack Developer','UI/UX Designer','React & Node.js Dev','1300+ DSA Solved','Software Engineer','Freelance Developer','Flickies Co-Founder'];
+const phrases=['Full Stack Engineer','Backend Engineer','Frontend Engineer','Cloud & DevOps Engineer','Data Engineer','Applied AI Builder','1200+ DSA Problems Solved','SIH Finalist'];
 let pi=0,ci=0,del=false;const tw=document.getElementById('tw');
 function type(){const p=phrases[pi];if(!del){tw.textContent=p.slice(0,++ci);if(ci===p.length){del=true;setTimeout(type,2300);return;}setTimeout(type,72);}else{tw.textContent=p.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;}setTimeout(type,36);}}
 setTimeout(type,1600);
@@ -711,7 +780,7 @@ const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 
 const sko=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const d=+e.target.dataset.d||0;setTimeout(()=>e.target.classList.add('shown'),d);sko.unobserve(e.target)}})},{threshold:.08});
-document.querySelectorAll('.skc').forEach((el,i)=>{el.dataset.d=i*48;sko.observe(el)});
+document.querySelectorAll('.skc').forEach(el=>{el.dataset.d=[...el.parentNode.children].indexOf(el)*40;sko.observe(el)});
 
 const pro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('shown'),+e.target.dataset.d||0);pro.unobserve(e.target)}})},{threshold:.08});
 document.querySelectorAll('.pc').forEach((el,i)=>{el.dataset.d=i*100;pro.observe(el)});
@@ -766,7 +835,7 @@ cf.addEventListener('submit',async e=>{
   const STORE='mv-ai-chat',MAX_TURNS=12;
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const WELCOME="Hi! I'm Manan's AI assistant. Ask me about his projects, skills, experience, or how to work with him.";
-  const CHIPS=['What does Manan build?','Tell me about InstaVEG','What is his tech stack?','Is he open to work?','How can I contact him?'];
+  const CHIPS=['What is Stampede?','What does Manan build?','What is his tech stack?','Is he open to work?','Can I see his resume?'];
   let history=[],busy=false;
 
   try{history=JSON.parse(sessionStorage.getItem(STORE))||[]}catch(e){history=[]}
