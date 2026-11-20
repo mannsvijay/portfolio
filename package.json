@@ -1,0 +1,8 @@
+{
+  "name": "mannsvijay-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Personal portfolio of Manan Vijay with a built-in AI assistant",
+  "type": "module",
+  "engines": { "node": ">=18" }
+}
