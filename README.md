@@ -2,11 +2,11 @@
 
 # Manan Vijay — Portfolio
 
-**Full Stack Developer · UI/UX Designer · Builder**
+**Full Stack · Backend · Frontend · Cloud &amp; DevOps · Data Engineer**
 
-A hand-built, single-page portfolio with a 3D particle hero and an AI assistant that answers visitors' questions about my work.
+A hand-built, single-page portfolio with a 3D particle hero, my featured engineering projects, and an AI assistant that answers visitors' questions about my work.
 
-[**Live site**](https://mannsvijay.vercel.app) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/mannsvijay) &nbsp;·&nbsp; [LeetCode](https://leetcode.com/u/mannsvijay) &nbsp;·&nbsp; [Email](mailto:mananvijay13@gmail.com)
+[**Live site**](https://mannsvijay.vercel.app) &nbsp;·&nbsp; [Resume](https://mannsvijay.vercel.app/Manan_Vijay_Resume.pdf) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/mannsvijay) &nbsp;·&nbsp; [LeetCode](https://leetcode.com/u/mannsvijay) &nbsp;·&nbsp; [Email](mailto:mananvijay13@gmail.com)
 
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -22,6 +22,12 @@ A hand-built, single-page portfolio with a 3D particle hero and an AI assistant 
 ## Features
 
 **Ask My AI.** A chat assistant in the corner of the page (and a button in the hero) that answers questions about my projects, skills, experience and availability. It only answers from a profile file I maintain, links to live demos and repos, replies in the visitor's language, and points people to email for anything it doesn't know. Conversations survive a page refresh within the same tab.
+
+**Featured projects.** Six projects across backend, full stack, data and security, led by Stampede, a ticketing platform built for thousands of buyers racing for the same seats. Each card links to its GitHub repo and, where one exists, a live demo.
+
+**Skills by category.** Languages, frontend, backend, databases and data, cloud and DevOps, applied AI, testing, and core CS.
+
+**Resume.** Open or download the PDF from the end of the page, or ask the AI assistant for it.
 
 **3D hero.** A Three.js particle field with a wireframe icosahedron and orbiting rings that follow the mouse. If the CDN is blocked, the page skips it and everything else keeps working.
 
@@ -48,6 +54,7 @@ A hand-built, single-page portfolio with a 3D particle hero and an AI assistant 
 ```
 portfolio/
 ├── index.html        # The whole site: markup, styles and scripts
+├── Manan_Vijay_Resume.pdf  # Linked from the Resume section and the AI assistant
 ├── api/
 │   ├── chat.js       # POST /api/chat, talks to the AI provider (key stays server-side)
 │   └── _profile.js   # What the assistant knows about me; edit this to update its answers
@@ -112,6 +119,8 @@ Model names change over time. If the assistant stops replying, check the provide
 | To change | Edit |
 | --- | --- |
 | What the assistant knows | `api/_profile.js` |
+| Resume | Replace `Manan_Vijay_Resume.pdf` (keep the file name) |
+| Projects, skills, achievements | The matching sections in `index.html` |
 | Assistant tone and rules | `SYSTEM_PROMPT` in `api/chat.js` |
 | Suggested questions and greeting | `CHIPS` and `WELCOME` in the AI assistant script in `index.html` |
 | Typewriter roles in the hero | `phrases` in `index.html` |
