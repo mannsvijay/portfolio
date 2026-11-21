@@ -43,7 +43,7 @@ SKILLS
 - Testing & Quality: Playwright, Vitest, JUnit, k6 load testing, concurrency testing
 - Core CS: Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks
 
-FEATURED PROJECTS (the six on the website)
+FEATURED PROJECTS (the seven on the website)
 1. Stampede (Backend / distributed systems) — IN ACTIVE DEVELOPMENT, no live demo yet.
    A ticketing platform built for contention: thousands of buyers racing for the same seats.
    Built so far: one Spring Boot app split into 8 modules (identity, inventory, booking, payments,
@@ -67,34 +67,46 @@ FEATURED PROJECTS (the six on the website)
    security audit found and fixed BOLA/IDOR authorization flaws before launch.
    Stack: TypeScript, React 19, Vite, TanStack Query, Tailwind, Express 5, PostgreSQL, Drizzle ORM, OpenAPI, Zod.
    Live: https://instaveg.vercel.app/  Code: https://github.com/mannsvijay/instaveg-fullstack
-3. Appointy (Full stack healthcare) — doctor appointment platform with Patient, Doctor and Admin portals:
+3. SocialTube (Full stack video platform) — YouTube + X (Twitter) style app: upload and watch videos,
+   likes on videos, comments and tweets, subscriptions, playlists, watch history, liked videos, tweets on
+   your channel, and a creator studio with channel stats and video management (edit, publish/draft, delete).
+   Guests can browse and watch everything published; actions need an account.
+   Express 5 REST API with JWT access + refresh tokens in httpOnly cookies (refresh tokens rotate and work
+   once), verifyJWT / optionalJWT middleware so public reads can still be personalised, Multer uploads to
+   Cloudinary with one retry and temp-file cleanup, cascading deletes of likes, comments and playlist entries.
+   React 19 + Vite SPA with TanStack Query, optimistic likes and subscriptions, automatic token refresh,
+   lazy-loaded routes. Backend on Render (free tier, so the first request can take up to a minute while it
+   wakes), frontend on Vercel, MongoDB Atlas, Cloudinary.
+   Stack: React 19, Vite, TanStack Query, React Router, Tailwind CSS 4, Node.js, Express 5, MongoDB, Mongoose,
+   JWT, bcrypt, Multer, Cloudinary.
+   Live: https://social-tube-manns.vercel.app/  Code: https://github.com/mannsvijay/SocialTube
+
+4. Appointy (Full stack healthcare) — doctor appointment platform with Patient, Doctor and Admin portals:
    specialty-based doctor discovery, slot booking, doctor dashboards with earnings, admin onboarding of
    doctors. JWT auth for all three roles; Razorpay and Stripe payments.
    Stack: React, Node.js, Express, MongoDB, JWT, Razorpay, Stripe.
    Live: https://appointy-roan.vercel.app/  Code: https://github.com/mannsvijay/appointy-fullstack
-4. FairShift (Data engineering) — workforce scheduling engine combining leave requests, shift coverage,
+5. FairShift (Data engineering) — workforce scheduling engine combining leave requests, shift coverage,
    skills and labour rules. Generates 2,000 employees, 100 teams, 90 days and 5,000 leave requests in about
    30 seconds; 144/144 validation checks pass on the exported files; injected anomalies are detected with
    precision and recall of 1.0; zero hard-constraint violations; byte-for-byte reproducible from a seed.
    Python standard library only, SQLite for load checks, 27 unit tests.
    Code: https://github.com/mannsvijay/fairshift-scheduler
-5. Insight Analytics Dashboard (Data / full stack) — analytics console over 1,000 research insights.
+6. Insight Analytics Dashboard (Data / full stack) — analytics console over 1,000 research insights.
    8 interactive charts and KPI cards driven by server-side MongoDB aggregation, combinable filters
    (country, region, topic, sector, PESTLE, source, end year), paginated sortable table.
    Stack: React 18, Vite, Tailwind, Recharts, Node.js, Express, MongoDB Atlas.
    Live: https://blackcoffer-insight-dashboard.vercel.app/
    Code: https://github.com/mannsvijay/Blackcoffer-insight-dashboard
-6. Cynbit Backend Audit (Backend / security) — passive, read-only backend and security audit of a
+7. Cynbit Backend Audit (Backend / security) — passive, read-only backend and security audit of a
    production Next.js website: 20 findings in four groups (data handling, security, API/architecture,
    rendering/performance), each with severity, confidence and evidence, plus 12 runnable reference fixes
    (security headers, Zod validation, RFC 9457 errors, rate limiting with Turnstile and a honeypot,
    transactional outbox, Prisma data model, AES-256-GCM PII encryption, multi-tenancy with Postgres RLS,
    data retention).
    Report: https://cynbit-backend-audit-black.vercel.app  Code: https://github.com/mannsvijay/cynbit-backend-audit
-
 OTHER WORK ON GITHUB
-SocialTube (YouTube + X style backend: JWT auth, video uploads, subscriptions, playlists, likes, comments;
-Node.js, Express, MongoDB) https://github.com/mannsvijay/SocialTube ; Chromatic Flux (Next.js + React Three
+Chromatic Flux (Next.js + React Three
 Fiber 3D experience); a Playwright + TypeScript QA automation suite; a ROS 2 TurtleBot3 Nav2 autonomous
 navigation demo; Power Electronics and FOC Radar exam study tools. All repos: https://github.com/mannsvijay
 
