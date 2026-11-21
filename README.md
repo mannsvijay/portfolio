@@ -23,7 +23,7 @@ A hand-built, single-page portfolio with a 3D particle hero, my featured enginee
 
 **Ask My AI.** A chat assistant in the corner of the page (and a button in the hero) that answers questions about my projects, skills, experience and availability. It only answers from a profile file I maintain, links to live demos and repos, replies in the visitor's language, and points people to email for anything it doesn't know. Conversations survive a page refresh within the same tab.
 
-**Featured projects.** Six projects across backend, full stack, data and security, led by Stampede, a ticketing platform built for thousands of buyers racing for the same seats. Each card links to its GitHub repo and, where one exists, a live demo.
+**Featured projects.** Seven projects across backend, full stack, data and security, led by Stampede, a ticketing platform built for thousands of buyers racing for the same seats. Each card links to its GitHub repo and, where one exists, a live demo.
 
 **Skills by category.** Languages, frontend, backend, databases and data, cloud and DevOps, applied AI, testing, and core CS.
 
