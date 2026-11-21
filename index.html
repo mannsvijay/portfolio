@@ -258,6 +258,8 @@ button.bgh{background:transparent}
 .pfh b{font-family:var(--fd);font-size:40px;font-weight:400;line-height:1;letter-spacing:1px;background:linear-gradient(135deg,var(--cyan),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .pfh span{font-size:13.5px;color:var(--muted);line-height:1.6;font-weight:300}
 .pmore{display:flex;flex-direction:column;justify-content:center;text-decoration:none;color:var(--text);border-style:dashed;background:transparent}
+.pmore{grid-column:1/-1}
+.pmore .pd{max-width:640px}
 .pmore .pl{margin-top:4px}
 .pmore:hover .pl{gap:14px;text-shadow:0 0 14px rgba(0,245,255,.7)}
 .ach .tla{margin-top:12px}
@@ -494,6 +496,15 @@ button.bgh{background:transparent}
 
     <article class="pc">
       <div class="pn">03</div>
+      <span class="pch g">Full Stack · Video Platform</span>
+      <h3 class="pt">SocialTube</h3>
+      <p class="pd">YouTube and X style video platform: upload and watch videos, like, comment, subscribe, build playlists, post tweets and track your channel in a creator studio. The Express 5 API keeps JWT access and refresh tokens in httpOnly cookies with single-use refresh rotation, sends uploads to Cloudinary with retry and temp-file cleanup, and the React frontend updates likes and subscriptions optimistically.</p>
+      <div class="pbs"><span class="pb">React 19</span><span class="pb">TanStack Query</span><span class="pb">Tailwind CSS</span><span class="pb">Node.js</span><span class="pb">Express 5</span><span class="pb">MongoDB</span><span class="pb">JWT</span><span class="pb">Cloudinary</span></div>
+      <div class="pls"><a href="https://social-tube-manns.vercel.app/" target="_blank" rel="noopener" class="pl">Live Demo →</a><a href="https://github.com/mannsvijay/SocialTube" target="_blank" rel="noopener" class="pl s">GitHub →</a></div>
+    </article>
+
+    <article class="pc">
+      <div class="pn">04</div>
       <span class="pch p">Full Stack · Healthcare</span>
       <h3 class="pt">Appointy</h3>
       <p class="pd">Doctor appointment platform with Patient, Doctor and Admin portals. Patients find doctors by specialty and book open slots, doctors manage availability and track earnings, and admins onboard doctors and oversee every booking. JWT authentication for all three roles, with Razorpay and Stripe payments.</p>
@@ -502,7 +513,7 @@ button.bgh{background:transparent}
     </article>
 
     <article class="pc">
-      <div class="pn">04</div>
+      <div class="pn">05</div>
       <span class="pch g">Data Engineering</span>
       <h3 class="pt">FairShift</h3>
       <p class="pd">Workforce scheduling engine that generates and schedules 2,000 employees across 100 teams for 90 days in about 30 seconds, then proves from the exported files alone that the data is consistent: 144 of 144 validation checks pass, labelled anomalies are caught with 1.0 precision and recall, and every run is byte-for-byte reproducible.</p>
@@ -511,7 +522,7 @@ button.bgh{background:transparent}
     </article>
 
     <article class="pc">
-      <div class="pn">05</div>
+      <div class="pn">06</div>
       <span class="pch">Data · Full Stack</span>
       <h3 class="pt">Insight Analytics Dashboard</h3>
       <p class="pd">Analytics console over 1,000 research insights scored on intensity, likelihood and relevance. Eight interactive charts and live KPI cards run on server-side MongoDB aggregation pipelines, with combinable filters for country, region, topic, sector, PESTLE, source and year.</p>
@@ -520,7 +531,7 @@ button.bgh{background:transparent}
     </article>
 
     <article class="pc">
-      <div class="pn">06</div>
+      <div class="pn">07</div>
       <span class="pch p">Backend · Security</span>
       <h3 class="pt">Cynbit Backend Audit</h3>
       <p class="pd">A passive, read-only backend and security audit of a production Next.js site: 20 findings across data handling, security, API design and performance, each with severity and evidence, plus 12 runnable reference fixes, including rate limiting, AES-256-GCM field encryption, a transactional outbox and Postgres row-level security.</p>
@@ -528,9 +539,9 @@ button.bgh{background:transparent}
       <div class="pls"><a href="https://cynbit-backend-audit-black.vercel.app" target="_blank" rel="noopener" class="pl">Read Report →</a><a href="https://github.com/mannsvijay/cynbit-backend-audit" target="_blank" rel="noopener" class="pl s">GitHub →</a></div>
     </article>
 
-    <a class="pc pmore" href="https://github.com/mannsvijay?tab=repositories" target="_blank" rel="noopener">
+<a class="pc pmore" href="https://github.com/mannsvijay?tab=repositories" target="_blank" rel="noopener">
       <h3 class="pt">More on GitHub</h3>
-      <p class="pd">30+ repositories, including SocialTube (a YouTube and X style backend), Chromatic Flux (a React Three Fiber experience), a Playwright QA suite, and a ROS 2 TurtleBot navigation demo.</p>
+      <p class="pd">30+ repositories, including Chromatic Flux (a React Three Fiber experience), a Playwright QA suite, and a ROS 2 TurtleBot navigation demo.</p>
       <span class="pl">Browse all repositories →</span>
     </a>
   </div>
