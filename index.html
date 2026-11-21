@@ -162,7 +162,7 @@ button.bgh{background:transparent}
 /* ACHIEVEMENTS */
 .achg{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px}
 .ach{padding:32px;background:rgba(255,255,255,.02);border:1px solid var(--b1);border-radius:20px;text-align:center;transition:all .45s;opacity:0;transform:scale(.94);cursor:none;position:relative;overflow:hidden}
-.ach::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(168,85,247,.07) 0%,transparent 65%);opacity:0;transition:opacity .45s}
+.ach::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(168,85,247,.07) 0%,transparent 65%);opacity:0;transition:opacity .45s;pointer-events:none}
 .ach.shown{opacity:1;transform:scale(1)}
 .ach.shown:hover{border-color:rgba(168,85,247,.32);background:rgba(168,85,247,.04);transform:scale(1.025) translateY(-5px);box-shadow:0 20px 55px rgba(168,85,247,.14)}
 .ach.shown:hover::before{opacity:1}
